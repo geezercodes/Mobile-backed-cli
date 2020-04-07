@@ -1,0 +1,22 @@
+{
+  "name": "node-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CsvExtractor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geezerP/Mobile-backed-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geezerP/Mobile-backed-cli/issues"
+  },
+  "homepage": "https://github.com/geezerP/Mobile-backed-cli#readme",
+  "dependencies": {
+    "fast-csv": "^4.1.3"
+  }
+}
