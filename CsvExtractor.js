@@ -10,10 +10,9 @@ let csvStream = fastcsv
   .parse()
   .on("data", function(data) {
     csvData.push({
-      id: data[0],
-      name: data[1],
-      description: data[2],
-      createdAt: data[3]
+      country: data[0],
+      Currency: data[1],
+      code: data[2],
     });
   })
   .on("end", function() {
