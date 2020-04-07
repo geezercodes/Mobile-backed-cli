@@ -31,7 +31,8 @@ mongoose.connect(dbConfig.url, {
 app.get('/', (req,res) => {
     res.json({"message":"Welcome to the CLI REST API "})
 });
-
+// Require Notes routes
+require('./app/routes/currency.routes.js')(app);
 //listen for requests 
 app.listen(3000, ()=> {
     console.log("Server is listening on port 3000");
