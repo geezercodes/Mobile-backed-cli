@@ -2,7 +2,7 @@ const fs = require("fs");
 const mongodb = require("mongodb").MongoClient;
 const fastcsv = require("fast-csv");
 
-// let url = "mongodb://username:password@localhost:27017/";
+//connect to a mongodb database instance for storage of the Converted json object
 let url = "mongodb://localhost:27017/";
 let stream = fs.createReadStream("Cheap.Stocks.Internationalization.Currencies.csv");
 let csvData = [];
@@ -20,7 +20,7 @@ let csvStream = fastcsv
     csvData.shift();
 
     console.log(csvData);
-
+//Connect to the mongodb instance and save the data for easy parsing in the API
     mongodb.connect(
       url,
       { useNewUrlParser: true, useUnifiedTopology: true },
