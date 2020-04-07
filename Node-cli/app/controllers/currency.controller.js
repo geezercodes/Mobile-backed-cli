@@ -4,7 +4,7 @@ const Currencies = require('../models/currency.model.js');
 
 // Find a single currency with the code
 exports.findOne = (req, res) => {
-    Currencies.findById(req.params.code)
+    Currencies.findOne({"code":req.params.code},{ country: 0, currency: 0, _id: 0, })
     .then(currency => {
         if(!currency) {
             return res.status(404).send({
@@ -15,7 +15,7 @@ exports.findOne = (req, res) => {
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: "The currency code " + req.params.code + "is not available" 
+                message: "The currency code " + req.params.code +   "is not available" 
             });                
         }
         return res.status(500).send({

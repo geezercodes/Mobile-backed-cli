@@ -11,7 +11,7 @@ let csvStream = fastcsv
   .on("data", function(data) {
     csvData.push({
       country: data[0],
-      Currency: data[1],
+      currency: data[1],
       code: data[2],
     });
   })
