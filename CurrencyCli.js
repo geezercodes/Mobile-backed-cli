@@ -3,7 +3,7 @@
 const request = require('request');
 const argv = require('yargs').argv;
 
-let code = argv.c || 'CDF';
+let code = argv.c.toUpperCase() || 'CDF';
 //url to our backend API
 let url = `http://localhost:3000/currencies/${code}`
 
@@ -15,7 +15,7 @@ request(url, function (err, response, body) {
   } else {
     let code = JSON.parse(body)
     // console.log(code);
-    let message = `The code  ${code.message} !`;
+    let message = `${code.message} !`;
     console.log(message);
   }
 });

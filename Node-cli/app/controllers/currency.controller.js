@@ -12,7 +12,7 @@ exports.findOne = (req, res) => {
             });            
         }else{
             return res.status(200).send({
-                message: "The currency code " + req.params.code +  " is  available with our system" 
+                message: "The currency code " + req.params.code +  " is available with our system" 
             });
            
         }
