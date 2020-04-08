@@ -1,6 +1,6 @@
 const Currencies = require('../models/currency.model.js');
 
-//commented out code signifies areas that can be added to the product down in the development phase.
+//commented out code signifies areas that can be added to the product later in the development phase.
 
 // Find a single currency with the code
 exports.findOne = (req, res) => {
@@ -8,14 +8,19 @@ exports.findOne = (req, res) => {
     .then(currency => {
         if(!currency) {
             return res.status(404).send({
-                message: "The currency code " + req.params.code + "is not available" 
+                message: "The currency code " + req.params.code + " is not available" 
             });            
+        }else{
+            return res.status(200).send({
+                message: "The currency code " + req.params.code +  " is  available with our system" 
+            });
+           
         }
-        res.send(currency);
+        // res.send(currency);
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: "The currency code " + req.params.code +   "is not available" 
+                message: "The currency code " + req.params.code +   " is not available" 
             });                
         }
         return res.status(500).send({
