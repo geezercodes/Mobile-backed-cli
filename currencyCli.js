@@ -8,6 +8,13 @@ console.log(`
     Version: 1.0.0.
     Usage: The user will be 
     then asked to select their currency code  of choice.
+
+
+    Please enter ISO 4217 currency code. Use the Following guide as an example:
+    [1] KES or kes 
+    [2] CVE or cve
+    [3] DJF or djf
+    [4] LYD or lyd
     `)
 
 readline.question(`Please enter Currency code you want to check: `, (name) => {

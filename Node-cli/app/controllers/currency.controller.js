@@ -8,7 +8,7 @@ exports.findOne = (req, res) => {
     .then(currency => {
         if(!currency) {
             return res.status(404).send({
-                message: "The currency code " + req.params.code + " is not available" 
+                message: "The currency code " + req.params.code + " is not available in our system yet" 
             });            
         }else{
             return res.status(200).send({
@@ -20,7 +20,7 @@ exports.findOne = (req, res) => {
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: "The currency code " + req.params.code +   " is not available" 
+                message: "The currency code " + req.params.code +   " is not available in our system yet" 
             });                
         }
         return res.status(500).send({
