@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/geezerP/Mobile-backed-cli#readme",
   "dependencies": {
+    "chalk": "^4.0.0",
     "fast-csv": "^4.1.3",
     "mongodb": "^3.5.5",
     "request": "^2.88.2",

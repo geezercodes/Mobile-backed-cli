@@ -1,10 +1,15 @@
+//require request and readline to help us make requests to the api and readline to read the commandline arguments
 const request = require('request');
+const chalk = require('chalk');
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 })
-console.log(`
+
+//Help menu to act as a guide to the user black and bgBlack
+console.log(chalk.bgBlack.green(`
     Welcome to the Node.js Currency Inquiry ! 
+    Author Meshack Mwaura
     Version: 1.0.0.
     Usage: The user will be 
     then asked to select their currency code  of choice.
@@ -15,9 +20,11 @@ console.log(`
     [2] CVE or cve
     [3] DJF or djf
     [4] LYD or lyd
-    `)
+    `))
 
-readline.question(`Please enter Currency code you want to check: `, (name) => {
+readline.question(chalk.blueBright(`Please enter Currency code you want to check: `), (name) => {
+
+  //convert input to uppercase to cater for validation and match content in the DB
   let code = name.toUpperCase() || 'CDF';
 
   let url = `http://localhost:3000/currencies/${code}`
