@@ -83,5 +83,5 @@ The **Focus Mobile Backend Take Home Challenge Appplication** is a cheap command
 - MongoDB
 - fast-csv
  ```
- ## Author
+## Author
 - [Meshack Mwaura](https://github.com/geezerP)
