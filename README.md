@@ -3,6 +3,10 @@
 Node CLI Application
 
 
+## Author
+- [Meshack Mwaura](https://github.com/geezerP)
+
+
 ## Description
 
 The **Focus Mobile Backend Take Home Challenge Appplication** is a cheap command line application centered around stocks that will be used by users in Africa. 
@@ -83,5 +87,3 @@ The **Focus Mobile Backend Take Home Challenge Appplication** is a cheap command
 - MongoDB
 - fast-csv
  ```
-## Author
-- [Meshack Mwaura](https://github.com/geezerP)
