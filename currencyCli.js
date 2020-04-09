@@ -25,7 +25,7 @@ console.log(chalk.bgBlack.green(`
 readline.question(chalk.blueBright(`Please enter Currency code you want to check: `), (name) => {
 
   //convert input to uppercase to cater for validation and match content in the DB
-  let code = name.toUpperCase();
+  let code = name.toUpperCase() ? name.toUpperCase(): "kes".toUpperCase();
 
   let url = `http://localhost:3000/currencies/${code}`
 
