@@ -31,7 +31,7 @@ The **Focus Mobile Backend Take Home Challenge Appplication** is a cheap command
 
 -   Check npm is installed:
     ```
-    pipenv --version
+    npm --version
     >>  6.14.4
 
     ```
